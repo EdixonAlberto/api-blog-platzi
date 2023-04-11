@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Api Platzi</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      body {
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        background: #1D2433;
+        overflow: hidden;
+      }
+
+      #app {
+        height: 100%;
+        padding: 0 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      pre {
+        height: 800px;
+        background: #1D2433;
+        overflow: scroll;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script type="module">
+      const response = await fetch('data.json');
+      const data = await response.json();
+      const jsonData = JSON.stringify(data, null, ' ');
+      const html = Prism.highlight(jsonData, Prism.languages.javascript, 'javascript');
+
+      document.getElementById('app').innerHTML += /* html */`
+        <pre><code class="language-javascript">${html}</code></pre>
+      `
+    </script>
+  </body>
+
+</html>
