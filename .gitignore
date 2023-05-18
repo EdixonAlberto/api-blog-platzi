@@ -1,0 +1,9 @@
+# App
+__pycache__/
+.pytest_cache/
+*.env
+
+# vsCode
+/.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json

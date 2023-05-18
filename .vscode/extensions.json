@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "ms-python.autopep8",
+    "ms-azuretools.vscode-docker",
+    "irongeek.vscode-env",
+    "esbenp.prettier-vscode",
+    "ms-python.python",
+    "donjayamanne.python-environment-manager",
+    "rangav.vscode-thunder-client"
+  ]
+}

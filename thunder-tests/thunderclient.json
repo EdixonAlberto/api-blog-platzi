@@ -1,0 +1,38 @@
+[
+  {
+    "_id": "d9a70b95-0d93-41d9-82c5-ef2a8ef6f153",
+    "colId": "cddfd273-b830-45d6-a492-04116975b2ef",
+    "containerId": "",
+    "name": "get blog posts",
+    "url": "{{HOST}}/api/posts",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-05-18T02:20:34.674Z",
+    "modified": "2023-06-06T16:26:59.977Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{ACCESS_TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "25bcea5a-68dc-4ddd-8fbf-ccaa64c4510d",
+    "colId": "cddfd273-b830-45d6-a492-04116975b2ef",
+    "containerId": "",
+    "name": "get status",
+    "url": "{{HOST}}/api",
+    "method": "GET",
+    "sortNum": 2500,
+    "created": "2023-06-06T15:48:08.057Z",
+    "modified": "2023-06-06T16:27:04.131Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{ACCESS_TOKEN}}"
+    },
+    "tests": []
+  }
+]
