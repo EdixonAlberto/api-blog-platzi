@@ -26,8 +26,9 @@ class Server(Config):
 
     mode_dev = self.env('MODE_DEV')
     reload: bool = mode_dev == 'development'
+    host: str = 'localhost' if mode_dev == 'development' else '0.0.0.0'
 
-    config = uvicorn.Config('src.modules.server:app', port=port, log_level="info", reload=reload)
+    config = uvicorn.Config('src.modules.server:app', host=host, port=port, log_level="info", reload=reload)
     server = uvicorn.Server(config)
     await server.serve()
 
